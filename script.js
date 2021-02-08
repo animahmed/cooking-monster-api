@@ -22,6 +22,11 @@ const displayFoods = foods =>{
 
 
 }
-
+const getFoodList = (list) =>{
+    const url= `https://www.themealdb.com/api/json/v1/1/list.php?c=${list}`;
+    fetch(url)
+    .then(res =>res.json())
+    .then (data =>console.log(data) )
+}
 
 
